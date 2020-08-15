@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+			integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>sign in form</title>
+	</head>
+	<body>
+		<div>
+			<form action="#" class="form-box">
+				<h1>Sign in</h1>
+				<div class="input-box">
+					<i class="fas fa-envelope"></i>
+					<input type="email" placeholder="Email" />
+				</div>
+				<div class="input-box">
+					<i class="fas fa-key"></i>
+					<input type="password" placeholder="Password" id="input" />
+					<span class="eye" onclick="hideShow()"
+						><i id="open" class="fas fa-eye"></i>
+						<i id="close" class="fas fa-eye-slash"></i
+					></span>
+				</div>
+				<button type="button" class="btn">LOGIN</button>
+			</form>
+		</div>
+		<script>
+			function hideShow() {
+				var input = document.getElementById("input");
+				var open = document.getElementById("open");
+				var close = document.getElementById("close");
+
+				if (input.type === "password") {
+					input.type = "text";
+					open.style.display = "block";
+					close.style.display = "none";
+				} else {
+					input.type = "password";
+					open.style.display = "none";
+					close.style.display = "block";
+				}
+			}
+		</script>
+	</body>
+</html>
